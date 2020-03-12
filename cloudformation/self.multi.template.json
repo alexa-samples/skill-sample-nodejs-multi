@@ -159,7 +159,7 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs8.10"
+        "Runtime": "nodejs10.x"
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {

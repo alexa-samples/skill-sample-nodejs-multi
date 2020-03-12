@@ -18,18 +18,18 @@ For successful implementation of this sample, you will need a current version of
 
 ### **Node.js**
 
-Node.js 8.12 or greater is required to run the client on your local machine. At a command line, you can verify which version is installed by running the command:
+Node.js 10 or greater is required to run the client on your local machine. At a command line, you can verify which version is installed by running the command:
 
 ```
 node --version
 ```
 
-If the reported version is less than 8.12, visit [https://nodejs.org/en/download/](https://nodejs.org/en/download/) and download a current version.
+If the reported version is less than 10, visit [https://nodejs.org/en/download/](https://nodejs.org/en/download/) and download a current version.
 
 
 ## Checkpoint
 - You should be able to access both your AWS and Alexa Developer accounts.
-- From a command-line you should be able to execute `node --version` and confirm that Node.js 8.12+ is installed.
+- From a command-line you should be able to execute `node --version` and confirm that Node.js 10+ is installed.
 
 Next to Step [2. Get the Sample](get-the-sample.md)
 

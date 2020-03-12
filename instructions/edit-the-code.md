@@ -10,7 +10,7 @@ Edit the handler to properly route and handle both a custom and smart home reque
 
 ### Import Handlers
 1. Open the Lambda Console at [https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph) and inspect the Function code section.
-2. In the indexWorkshop.handler handler, look for `EDIT_CODE #0` and uncomment the entire block except for the `// EDIT_CODE ...` line.
+2. In the indexWorkshop.handler handler, look for `EDIT_CODE #0` and uncomment the entire block except for the `// EDIT_CODE ...` line (you can use CMD-/ which is a shortcut for *Edit* -> *Comment* -> *Toggle Comment* in the embedded IDE)
 
 > If the file is not already open in the inline editor, you can open it from the file tree on the left.
 
@@ -48,7 +48,7 @@ Send a simulated Alexa Smart Home Discovery request to test the Lambda.
 
 1. Open the Lambda Console for the handler at [https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph)](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph)
 2. Open the *Select a test event..* dropdown from the top right of the menu and select **Configure test events**.
-3. In the *Configure test event* dialog, create a new test event with the *Event name* of `directiveDiscovery` and paste the raw content from [https://raw.githubusercontent.com/alexa/alexa-smarthome/master/sample_messages/Discovery/Discovery.request.json](https://raw.githubusercontent.com/alexa/alexa-smarthome/master/sample_messages/Discovery/Discovery.request.json) into the text area replacing the existing placeholder content.
+3. In the *Configure test event* dialog, create a new test event with the *Event name* of `directiveDiscovery` and paste the raw content from the file **Discovery.request.json** in the folder *instructions* ([source](https://raw.githubusercontent.com/alexa/alexa-smarthome/master/sample_messages/Discovery/Discovery.request.json)) into the text area replacing the existing placeholder content.
 4. Click the **Create** button at the bottom to create the test event.
 5. With the *directiveDiscovery* test selected in the dropdown, click **Test**.
 6. Open the **Execution result** details to inspect the result and notice that your handler now returns a `Discover.Response` and the definition of a "Beeper" device.

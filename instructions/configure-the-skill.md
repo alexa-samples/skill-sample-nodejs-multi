@@ -8,7 +8,7 @@ Configure the Custom model settings for the skill by setting the invocation, cre
 
 ### Configure the Invocation
 1. Return to the Alexa Skills Kit Developer Console at [https://developer.amazon.com/alexa/console/ask](https://developer.amazon.com/alexa/console/ask) and edit your *Beeper* skill.
-2. On left menu, select the *CUSTOM* tab.
+2. If you see Smart home model details, on left menu, select the *CUSTOM* tab (otherwise there's no need to do this).
 3. Select the *Invocation* sub-tab and verify the *Skill Invocation Name* is set to `beeper`.
 
 ### Configure the Intents
@@ -27,13 +27,13 @@ Configure the Custom model settings for the skill by setting the invocation, cre
 4. Click the **Save Endpoints** button.
 5. Return to the *Invocation* sub-tab and click the **Build Model** button.
 
-> After a minute or two, you should receive a **Build Successful** notice. It is OK to proceed while the Custom model builds in the background.
+> After a minute or so, you should receive a **Full Build Successful** notice. It is OK to proceed with the next steps while the Custom model builds in the background.
 
 ## Configure the Smart Home settings
 
 Set the endpoint value of the Smart Home model to the same created Lambda ARN as the Custom model. 
 
-1. On left menu, select the *SMART HOME* tab.
+1. On left menu, select *PERMISSIONS* or *ACCOUNT LINKING*, then select the *SMART HOME* tab.
 2. For the *Smart Home service endpoint*, enter the ARN saved in your `setup.txt` file as **[AWS Lambda ARN]** into the *Default endpoint* field. The ARN should look something like: `arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:skill-sample-LANGUAGE-multi`
 3. Click the **Save** button.
 
@@ -47,7 +47,7 @@ Fill out the required entities for account linking and copy your unique redirect
 3. For the Access Token URI, enter `https://api.amazon.com/auth/o2/token`.
 4. For the Client ID, copy and paste the previously saved **[Security Profile Client ID]** value from the `setup.txt` file.
 5. For the Client Secret, copy and paste the previously saved **[Security Profile Client Secret]** value from the `setup.txt` file.
-6. Under *Scope*, click the **+ Add scope** link and then add the following scope into the text box: `profile:user_id`
+6. Under *Scope*, click the **+ Add scope** link and then add the following scope into the text box that says *Enter scope...*: `profile:user_id`
 7. Copy the three (3) redirect urls from the Redirect URLs section and save them to the **[Redirect URLs]** section of the `setup.txt` file.
 8. Click **Save**.
 

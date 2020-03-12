@@ -9,7 +9,7 @@ Before you can use your skill, you need to account link the skill.
 1. Browse to [https://alexa.amazon.com](https://alexa.amazon.com).
 2. Select *Skills* from the left menu.
 3. Click the **Your Skills** button from the top-right.
-4. Filter down to *DEV SKILLS* and click on your *Beeper* skill. (It should say "Account linking required")
+4. In the search box type *Beeper* and your skill will show up. (It should say "Account linking required"). Click on it.
 5. Click the **Enable** button and sign in as necessary and click 'Allow' to sign in to Skill Sample.
 6. If successful, you should receive a confirmation similar to "Beeper has been successfully linked."
 7. Close the tab, return to the skill, and click the **Discover Devices** button.
