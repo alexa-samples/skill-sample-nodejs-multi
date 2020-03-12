@@ -21,7 +21,7 @@ Update the problem code to properly pass a response.
 2. Review the code for errors:
 	- Have a hard stare at the `process_response` function and understand what it does (or shouldn't do).
 	- Understand what the `EDIT_CODE #66` block does and how our smart home test functions succeeded.
-3. Fix the code by simply returning the `response`.
+3. Fix the code by simply returning the `response_value`.
 4. Click the **Save** button of the Lambda.
 
 > If you are really stuck and cannot get the code to run change the Handler in the Lambda Function Code from `indexWorkshop.handler` to `index.handler` or at least compare and contrast the two underlying source files.

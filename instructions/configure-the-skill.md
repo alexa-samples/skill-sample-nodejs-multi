@@ -44,12 +44,13 @@ Fill out the required entities for account linking and copy your unique redirect
 
 1. Either select the *ACCOUNT LINKING* tab from the left menu or click the **Setup Account Linking** button from the Smart Home model section.
 2. On the *Account Linking* page, for the *Authorization URI*, enter `https://www.amazon.com/ap/oa`.
-3. For the Access Token URI, enter `https://api.amazon.com/auth/o2/token`.
-4. For the Client ID, copy and paste the previously saved **[Security Profile Client ID]** value from the `setup.txt` file.
-5. For the Client Secret, copy and paste the previously saved **[Security Profile Client Secret]** value from the `setup.txt` file.
-6. Under *Scope*, click the **+ Add scope** link and then add the following scope into the text box that says *Enter scope...*: `profile:user_id`
-7. Copy the three (3) redirect urls from the Redirect URLs section and save them to the **[Redirect URLs]** section of the `setup.txt` file.
-8. Click **Save**.
+3. For the *Access Token URI*, enter `https://api.amazon.com/auth/o2/token`.
+4. For the *Client ID*, copy and paste the previously saved **[Security Profile Client ID]** value from the `setup.txt` file.
+5. For the *Client Secret*, copy and paste the previously saved **[Security Profile Client Secret]** value from the `setup.txt` file.
+6. For *Your Authentication Scheme* select **Credentials in request body**.
+7. Under *Scope*, click the **+ Add scope** link and then add the following scope into the text box that says *Enter scope...*: `profile:user_id`
+8. Copy the three (3) redirect urls from the Redirect URLs section and save them to the **[Redirect URLs]** section of the `setup.txt` file.
+9. Click **Save**.
 
 ## Set the Allowed Return URLs
 
