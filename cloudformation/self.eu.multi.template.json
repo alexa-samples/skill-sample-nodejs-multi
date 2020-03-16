@@ -148,7 +148,7 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "miscalexa",
+          "S3Bucket": "eu-skill-packages",
           "S3Key": "skill-sample-nodejs-multi.zip"
         },
         "FunctionName": "skill-sample-nodejs-multi",
@@ -237,7 +237,7 @@
     },
     "CodeUrl": {
       "Description": "The URL for the Code",
-      "Value": "https://miscalexa.s3-eu-west-1.amazonaws.com/skill-sample-nodejs-multi-workshop.zip",
+      "Value": "https://eu-skill-packages.s3-eu-west-1.amazonaws.com/skill-sample-nodejs-multi-workshop.zip",
       "Export": {
         "Name": "beeper-function-code-url"
       }
