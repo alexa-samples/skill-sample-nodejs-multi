@@ -56,8 +56,8 @@
           "summary": "Una skill que pita.",
           "examplePhrases": [
             "Alexa abre pitador",
-            "Alexa dile a pitador que pite",
-            "Alexa dile a pitador que pite una vez"
+            "Alexa abre pitador y pita",
+            "Alexa dile a pitador que pite"
           ],
           "name": "Pitador",
           "description": "Una demo que le dice a tu máquina que pite."
@@ -66,8 +66,8 @@
           "summary": "Una skill que pita.",
           "examplePhrases": [
             "Alexa abre pitador",
-            "Alexa dile a pitador que pite",
-            "Alexa dile a pitador que pite una vez"
+            "Alexa abre pitador y pita",
+            "Alexa dile a pitador que pite"
           ],
           "name": "Pitador",
           "description": "Una demo que le dice a tu máquina que pite."
@@ -76,8 +76,8 @@
           "summary": "Una skill que pita.",
           "examplePhrases": [
             "Alexa abre pitador",
-            "Alexa dile a pitador que pite",
-            "Alexa dile a pitador que pite una vez"
+            "Alexa abre pitador y pita",
+            "Alexa dile a pitador que pite"
           ],
           "name": "Pitador",
           "description": "Una demo que le dice a tu máquina que pite."
