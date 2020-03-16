@@ -1,7 +1,7 @@
 {
   "interactionModel": {
       "languageModel": {
-          "invocationName": "beeper",
+          "invocationName": "pitador",
           "intents": [
               {
                   "name": "AMAZON.FallbackIntent",
@@ -27,8 +27,12 @@
                   "name": "BeepIntent",
                   "slots": [],
                   "samples": [
-                      "beep once",
-                      "beep"
+                      "pita una vez",
+                      "pitar una vez",
+                      "pita",
+                      "pitar",
+                      "pite una vez",
+                      "pite"
                   ]
               }
           ],

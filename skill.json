@@ -11,6 +11,76 @@
           ],
           "name": "Beeper",
           "description": "An Alexa sample application that intructs your computer to beep."
+        },
+        "en-GB": {
+          "summary": "A skill that beeps.",
+          "examplePhrases": [
+            "Alexa open beeper",
+            "Alexa tell beeper to beep",
+            "Alexa ask beeper to beep once"
+          ],
+          "name": "Beeper",
+          "description": "An Alexa sample application that intructs your computer to beep."
+        },
+        "en-CA": {
+          "summary": "A skill that beeps.",
+          "examplePhrases": [
+            "Alexa open beeper",
+            "Alexa tell beeper to beep",
+            "Alexa ask beeper to beep once"
+          ],
+          "name": "Beeper",
+          "description": "An Alexa sample application that intructs your computer to beep."
+        },
+        "en-IN": {
+          "summary": "A skill that beeps.",
+          "examplePhrases": [
+            "Alexa open beeper",
+            "Alexa tell beeper to beep",
+            "Alexa ask beeper to beep once"
+          ],
+          "name": "Beeper",
+          "description": "An Alexa sample application that intructs your computer to beep."
+        },
+        "en-AU": {
+          "summary": "A skill that beeps.",
+          "examplePhrases": [
+            "Alexa open beeper",
+            "Alexa tell beeper to beep",
+            "Alexa ask beeper to beep once"
+          ],
+          "name": "Beeper",
+          "description": "An Alexa sample application that intructs your computer to beep."
+        },
+        "es-ES": {
+          "summary": "Una skill que pita.",
+          "examplePhrases": [
+            "Alexa abre pitador",
+            "Alexa dile a pitador que pite",
+            "Alexa dile a pitador que pite una vez"
+          ],
+          "name": "Pitador",
+          "description": "Una demo que le dice a tu máquina que pite."
+        },
+        "es-MX": {
+          "summary": "Una skill que pita.",
+          "examplePhrases": [
+            "Alexa abre pitador",
+            "Alexa dile a pitador que pite",
+            "Alexa dile a pitador que pite una vez"
+          ],
+          "name": "Pitador",
+          "description": "Una demo que le dice a tu máquina que pite."
+        },
+        "es-US": {
+          "summary": "Una skill que pita.",
+          "examplePhrases": [
+            "Alexa abre pitador",
+            "Alexa dile a pitador que pite",
+            "Alexa dile a pitador que pite una vez"
+          ],
+          "name": "Pitador",
+          "description": "Una demo que le dice a tu máquina que pite."
         }
       },
       "isAvailableWorldwide": true,
