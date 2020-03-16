@@ -17,9 +17,11 @@
 'use strict';
 
 const AWS = require('aws-sdk');
-AWS.config.update({region: 'us-east-1'});
+const region = 'eu-west-1';
+const queue_id = 'XXXXXXXXXXXX';
+AWS.config.update({region: region});
 let sqsClient = new AWS.SQS();
-let sqsQueueUrl = 'https://sqs.us-east-1.amazonaws.com/XXXXXXXXXXXX/BeeperEventQueue';
+let sqsQueueUrl = `https://sqs.${region}.amazonaws.com/${queue_id}/BeeperEventQueue`;
 
 const IndexDirective = require('indexDirective');
 const IndexSession = require('indexSession');

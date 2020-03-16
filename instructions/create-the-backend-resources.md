@@ -8,7 +8,7 @@ For this sample you will need backend AWS resources that support the skill. Usin
 
 ## Apply the CloudFormation Template
 
-Access the AWS CloudFormation console in *us-east-1* and load a template file to provision backend resources.
+Access the AWS CloudFormation console in your preferred region and load a template file to provision backend resources.
 
 1. Login to the AWS Console for CloudFormation at [https://console.aws.amazon.com/cloudformation/home](https://console.aws.amazon.com/cloudformation/home) (then select the region that is most appropriate for your smart home locale of choice, eg. for North America choose *us-east-1*, for Europe and India choose *eu-west-1* and for Far East choose *us-west-1*).
 2. Click **Create stack** and select **With new resources (standard)**.
@@ -28,15 +28,15 @@ Access the AWS CloudFormation console in *us-east-1* and load a template file to
 After the stack completes, collect the created resource identfiers.
 
 1. When the *skill-sample-nodejs-multi* stack is created, you will see its *Status* reported as `CREATE_COMPLETE`.
-2. From the *Outputs* tab of the stack, collect value of the `BeeperFunctionLambdaArn` key and store it into the **[AWS Lambda ARN]** section of the `setup.txt` file in your working directory. It will look something like the following: `arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`.
+2. From the *Outputs* tab of the stack, collect value of the `BeeperFunctionLambdaArn` key and store it into the **[AWS Lambda ARN]** section of the `setup.txt` file in your working directory. It will look something like the following: `arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`.
 3. While in the *Outputs* tab, also collect the `BeeperSqsQueueUrl` value and store it in the **[Amazon SQS Queue Url]** section of the `setup.txt` file.
 
 	```
 	[AWS Lambda ARN]
-	arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:skill-sample-LANGUAGE-multi
+	arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi
 
 	[Amazon SQS Queue Url]
-	https://sqs.us-east-1.amazonaws.com/XXXXXXXXXXXX/BeeperEventQueue
+	https://sqs.region.amazonaws.com/XXXXXXXXXXXX/BeeperEventQueue
 	```
 
 
