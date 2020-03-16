@@ -89,12 +89,7 @@
       "distributionCountries": []
     },
     "apis": {
-      "custom": {
-        "endpoint": {
-          "sourceDir": "lambda/custom",
-          "uri": "skill-sample-nodejs-multi"
-        }
-      },
+      "custom": {},
       "smartHome": {
         "protocolVersion": "3"
       }

@@ -10,9 +10,9 @@ For this sample you will need backend AWS resources that support the skill. Usin
 
 Access the AWS CloudFormation console in *us-east-1* and load a template file to provision backend resources.
 
-1. Login to the AWS Console for CloudFormation at [https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks).
+1. Login to the AWS Console for CloudFormation at [https://console.aws.amazon.com/cloudformation/home](https://console.aws.amazon.com/cloudformation/home) (then select the region that is most appropriate for your smart home locale of choice, eg. for North America choose *us-east-1*, for Europe and India choose *eu-west-1* and for Far East choose *us-west-1*).
 2. Click **Create stack** and select **With new resources (standard)**.
-3. Select **Template is ready** and **Upload a template file**. If you are attending a workshop, choose the `workshop.multi.template.json` file from the */cloudformation* directory in your working directory. Otherwise select the `self.multi.template.json` file (the workshop template will append the word "workshop" to a bunch of resources in the stack).
+3. Select **Template is ready** and **Upload a template file**. If you are attending a workshop in the US, choose the `workshop.multi.template.json` (US) or the `workshop.eu.multi.template.json` (EU) file from the */cloudformation* directory in your working directory. Otherwise select the `self.multi.template.json` (US) or the `self.eu.multi.template.json` (EU) file (the `workshop` templates will append the word "workshop" by default to a bunch of resources in the stack, you can change this in the stack parameters).
 4. Click **Next**.
 5. For the **Stack name** on the *Stack Details* page, enter `skill-sample-nodejs-multi`.
 6. In the **AlexaSkillId** field of the *Parameters*, enter the Alexa Skill ID of the previously created skill stored in the **[Alexa Skill Application ID]** section of the `setup.txt` file.

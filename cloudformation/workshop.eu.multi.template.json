@@ -1,0 +1,283 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": {
+    "AlexaSkillId": {
+      "Type": "String",
+      "Default": "",
+      "Description": "The Alexa Skill ID."
+    },
+    "Code": {
+      "Type": "String",
+      "Default": "workshop",
+      "Description": "The URL of the packaged sample code.",
+      "ConstraintDescription": "[a-z]+"
+    }
+  },
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "b6b1f0bd-621e-4c3b-b0dd-ad660c51f159": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 330,
+          "y": 240
+        },
+        "z": 1,
+        "embeds": [],
+        "dependson": [
+          "86ea874c-f935-4b31-b25b-6920141d8928"
+        ]
+      },
+      "143ca3f1-ae3c-47c6-902a-0031cc6a7d4f": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 540,
+          "y": 240
+        },
+        "z": 1,
+        "embeds": [],
+        "dependson": [
+          "86ea874c-f935-4b31-b25b-6920141d8928"
+        ]
+      },
+      "1de931b4-0b57-48dd-9a6f-5525e33fa753": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 60,
+          "y": 90
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "d14c61fa-290a-47c6-adf1-24eff373f620": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 180,
+          "y": 90
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "143ca3f1-ae3c-47c6-902a-0031cc6a7d4f"
+        ]
+      },
+      "38ad2904-aa96-47a3-ad36-2f7f73a6939a": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 300,
+          "y": 90
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "143ca3f1-ae3c-47c6-902a-0031cc6a7d4f"
+        ]
+      },
+      "9ce353c6-5774-49ff-a395-3f691924595d": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 60,
+          "y": 230
+        },
+        "z": 0,
+        "embeds": []
+      }
+    }
+  },
+  "Resources": {
+    "BeeperFunctionExecutionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "skill-sample-nodejs-multi",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogStream",
+                    "logs:CreateLogGroup",
+                    "logs:PutLogEvents",
+                    "sqs:SendMessage"
+                  ],
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "RoleName": "lambda_skill_sample_nodejs_multi"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "b6b1f0bd-621e-4c3b-b0dd-ad660c51f159"
+        }
+      },
+      "DependsOn": []
+    },
+    "BeeperFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "miscalexa",
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                "skill-sample-nodejs-multi-",
+                {
+                  "Ref": "Code"
+                },
+                ".zip"
+              ]
+            ]
+          }
+        },
+        "FunctionName": "skill-sample-nodejs-multi",
+        "Handler": "indexWorkshop.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "BeeperFunctionExecutionRole",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "143ca3f1-ae3c-47c6-902a-0031cc6a7d4f"
+        }
+      },
+      "DependsOn": []
+    },
+    "BeeperFunctionPermissionSH": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "EventSourceToken": {
+          "Ref": "AlexaSkillId"
+        },
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "BeeperFunction",
+            "Arn"
+          ]
+        },
+        "Principal": "alexa-connectedhome.amazon.com"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "38ad2904-aa96-47a3-ad36-2f7f73a6939a"
+        }
+      }
+    },
+    "BeeperFunctionPermissionASK": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "EventSourceToken": {
+          "Ref": "AlexaSkillId"
+        },
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "BeeperFunction",
+            "Arn"
+          ]
+        },
+        "Principal": "alexa-appkit.amazon.com"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "d14c61fa-290a-47c6-adf1-24eff373f620"
+        }
+      }
+    },
+    "BeeperEventQueue": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "QueueName": "BeeperEventQueue"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "9ce353c6-5774-49ff-a395-3f691924595d"
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "BeeperFunctionLambdaArn": {
+      "Description": "The Alexa Skill Lambda ARN of the Beeper function.",
+      "Value": {
+        "Fn::GetAtt": [
+          "BeeperFunction",
+          "Arn"
+        ]
+      },
+      "Export": {
+        "Name": "beeper-function-lambda-arn"
+      }
+    },
+    "CodeUrl": {
+      "Description": "The URL for the Code",
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://miscalexa.s3-eu-west-1.amazonaws.com/skill-sample-nodejs-multi-",
+            {
+              "Ref": "Code"
+            },
+            ".zip"
+          ]
+        ]
+      },
+      "Export": {
+        "Name": "beeper-function-code-url"
+      }
+    },
+    "BeeperSqsQueueUrl": {
+      "Description": "The URL for the SQS Queue",
+      "Value": {
+        "Ref": "BeeperEventQueue"
+      },
+      "Export": {
+        "Name": "beeper-event-queue-url"
+      }
+    }
+  }
+}
