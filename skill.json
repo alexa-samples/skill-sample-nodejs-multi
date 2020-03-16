@@ -91,7 +91,8 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda/custom"
+          "sourceDir": "lambda/custom",
+          "uri": "skill-sample-nodejs-multi"
         }
       }
     },
