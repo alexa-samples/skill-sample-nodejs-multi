@@ -94,6 +94,9 @@
           "sourceDir": "lambda/custom",
           "uri": "skill-sample-nodejs-multi"
         }
+      },
+      "smartHome": {
+        "protocolVersion": "3"
       }
     },
     "manifestVersion": "1.0"
