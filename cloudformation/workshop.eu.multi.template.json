@@ -154,7 +154,7 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "us-skill-packages",
+          "S3Bucket": "eu-skill-packages",
           "S3Key": {
             "Fn::Join": [
               "",
@@ -258,7 +258,7 @@
         "Fn::Join": [
           "",
           [
-            "https://us-skill-packages.s3.amazonaws.com/skill-sample-nodejs-multi-",
+            "https://eu-skill-packages.s3-eu-west-1.amazonaws.com/skill-sample-nodejs-multi-",
             {
               "Ref": "Code"
             },

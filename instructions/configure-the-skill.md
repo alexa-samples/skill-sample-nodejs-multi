@@ -7,11 +7,13 @@ Configure the Alexa skill and fill out the required settings.
 Configure the Custom model settings for the skill by setting the invocation, creating a BeepIntent, and assigning the endpoint to the created Lambda ARN.
 
 ### Configure the Invocation
+*Note: you can skip this if you deployed the skill via the ASK-CLI.*
 1. Return to the Alexa Skills Kit Developer Console at [https://developer.amazon.com/alexa/console/ask](https://developer.amazon.com/alexa/console/ask) and edit your *Beeper* skill.
-2. On left menu, select the *CUSTOM* tab.
+2. If you see Smart home model details, on left menu, select the *CUSTOM* tab (otherwise there's no need to do this).
 3. Select the *Invocation* sub-tab and verify the *Skill Invocation Name* is set to `beeper`.
 
 ### Configure the Intents
+*Note: you can skip this if you deployed the skill via the ASK-CLI.*
 1. Click the **+ Add** button in the *Intents* sub-tab.
 2. With *Create custom intent* selected, enter `BeepIntent` 
 3. Click the **Create custom intent** button.
@@ -23,18 +25,18 @@ Configure the Custom model settings for the skill by setting the invocation, cre
 ### Configure the Endpoint
 1. Click *Endpoint* sub-tab.
 2. Select *AWS Lambda ARN*
-3. In the **Default Region**, enter the ARN stored as **[AWS Lambda ARN]** in the `setup.txt` file. The ARN should look something like: `arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:skill-sample-LANGUAGE-multi`
+3. In the **Default Region**, enter the ARN stored as **[AWS Lambda ARN]** in the `setup.txt` file. The ARN should look something like: `arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`
 4. Click the **Save Endpoints** button.
 5. Return to the *Invocation* sub-tab and click the **Build Model** button.
 
-> After a minute or two, you should receive a **Build Successful** notice. It is OK to proceed while the Custom model builds in the background.
+> After a minute or so, you should receive a **Full Build Successful** notice. It is OK to proceed with the next steps while the Custom model builds in the background.
 
 ## Configure the Smart Home settings
 
 Set the endpoint value of the Smart Home model to the same created Lambda ARN as the Custom model. 
 
-1. On left menu, select the *SMART HOME* tab.
-2. For the *Smart Home service endpoint*, enter the ARN saved in your `setup.txt` file as **[AWS Lambda ARN]** into the *Default endpoint* field. The ARN should look something like: `arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:skill-sample-LANGUAGE-multi`
+1. On left menu, select *PERMISSIONS* or *ACCOUNT LINKING*, then select the *SMART HOME* tab.
+2. For the *Smart Home service endpoint*, enter the ARN saved in your `setup.txt` file as **[AWS Lambda ARN]** into the *Default endpoint* field. The ARN should look something like: `arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`
 3. Click the **Save** button.
 
 
@@ -44,12 +46,13 @@ Fill out the required entities for account linking and copy your unique redirect
 
 1. Either select the *ACCOUNT LINKING* tab from the left menu or click the **Setup Account Linking** button from the Smart Home model section.
 2. On the *Account Linking* page, for the *Authorization URI*, enter `https://www.amazon.com/ap/oa`.
-3. For the Access Token URI, enter `https://api.amazon.com/auth/o2/token`.
-4. For the Client ID, copy and paste the previously saved **[Security Profile Client ID]** value from the `setup.txt` file.
-5. For the Client Secret, copy and paste the previously saved **[Security Profile Client Secret]** value from the `setup.txt` file.
-6. Under *Scope*, click the **+ Add scope** link and then add the following scope into the text box: `profile:user_id`
-7. Copy the three (3) redirect urls from the Redirect URLs section and save them to the **[Redirect URLs]** section of the `setup.txt` file.
-8. Click **Save**.
+3. For the *Access Token URI*, enter `https://api.amazon.com/auth/o2/token`.
+4. For the *Client ID*, copy and paste the previously saved **[Security Profile Client ID]** value from the `setup.txt` file.
+5. For the *Client Secret*, copy and paste the previously saved **[Security Profile Client Secret]** value from the `setup.txt` file.
+6. For *Your Authentication Scheme* leave **HTTP Basic (Recommended)** selected.
+7. Under *Scope*, click the **+ Add scope** link and then add the following scope into the text box that says *Enter scope...*: `profile:user_id`
+8. Copy the three (3) redirect urls from the Redirect URLs section and save them to the **[Redirect URLs]** section of the `setup.txt` file.
+9. Click **Save**.
 
 ## Set the Allowed Return URLs
 

@@ -1,6 +1,6 @@
 # 5. Create a Security Profile
 
-For the sample environment, a development security profile will be used for configuring Account Linking, which is required for the Smart Home model and therefore for the skill overall.
+For the sample environment, a development security profile will be used for configuring [Account Linking](https://developer.amazon.com/en-US/docs/alexa/account-linking/understand-account-linking.html), which is required for the Smart Home model and therefore for the skill overall.
 
 > If you already have a valid `Skill Sample` security profile created from a previous sample, you can reuse that profile and skip creating and configuring a new security profile.
 
@@ -15,7 +15,7 @@ To facilitate account linking in the sample, a security profile is needed to gen
 2. On the *Security Profile Management* page, enter `Skill Sample` for the Security Profile Name.
 3. For the *Security Profile Description* enter `A security profile for Alexa Skill samples`.
 4. Click **Save** on the *Security Profile Management* page.
-5. On the resulting page, copy the displayed Client ID and Client Secret values of the *Skill Sample - Security Profile* and save them to the `setup.txt` file in the `instructions` directory of the sample replacing the format example entries for **[Security Profile Client ID]** and **[Security Profile Client Secret]** respectively.
+5. On the *Web Settings* tab, copy the displayed Client ID and Client Secret values of the *Skill Sample - Security Profile* and save them to the `setup.txt` file in the `instructions` directory of the sample replacing the format example entries for **[Security Profile Client ID]** and **[Security Profile Client Secret]** respectively.
 
 	```
 	[Security Profile Client ID]

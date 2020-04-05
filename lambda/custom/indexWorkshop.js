@@ -22,9 +22,10 @@
 
 // // EDIT_CODE #3 - Uncomment below and replace with your SqsQueueUrl from the CloudFormation template Outputs
 // const AWS = require('aws-sdk');
-// AWS.config.update({region: 'us-east-1'});
+// const region = 'eu-west-1';
+// AWS.config.update({region: region});
 // let sqsClient = new AWS.SQS();
-// let sqsQueueUrl = 'https://sqs.us-east-1.amazonaws.com/XXXXXXXXXXXX/BeeperEventQueue';
+// let sqsQueueUrl = `https://sqs.${region}.amazonaws.com/XXXXXXXXXXXX/BeeperEventQueue`;
 
 exports.handler = async function(request, context) {
 

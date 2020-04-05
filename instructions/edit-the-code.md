@@ -9,8 +9,8 @@ Edit the handler to properly route and handle both a custom and smart home reque
 > Pressing Ctrl+/ on Windows or Cmd+/ in the inline code editor lets you comment and uncomment blocks of code.
 
 ### Import Handlers
-1. Open the Lambda Console at [https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph) and inspect the Function code section.
-2. In the indexWorkshop.handler handler, look for `EDIT_CODE #0` and uncomment the entire block except for the `// EDIT_CODE ...` line.
+1. Open the Lambda Console at [https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph) (US) or [https://console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/skill-sample-nodejs-multi?tab=graph](https://console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/skill-sample-nodejs-multi?tab=graph) (EU) and inspect the Function code section.
+2. In the indexWorkshop.handler handler, look for `EDIT_CODE #0` and uncomment the entire block except for the `// EDIT_CODE ...` line (you can use CMD-/ which is a shortcut for *Edit* -> *Comment* -> *Toggle Comment* in the embedded IDE)
 
 > If the file is not already open in the inline editor, you can open it from the file tree on the left.
 
@@ -32,7 +32,7 @@ This code looks for a session, passes the request to the session handler, and th
 Edit the handler code to enable sending a message to your event queue.
 
 1. In the indexWorkshop.handler handler, look for `EDIT_CODE #3` and uncomment the block.
-2. Replace the value of the `sqsQueueUrl` variable with the **[Amazon SQS Queue Url]** value from the `setup.txt` file. The value you will want to replace looks like `https://sqs.us-east-1.amazonaws.com/XXXXXXXXXXXX/events-device-alexa`.
+2. Replace the value of the `sqsQueueUrl` variable with the **[Amazon SQS Queue Url]** value from the `setup.txt` file. The value you will want to replace looks like `https://sqs.region.amazonaws.com/XXXXXXXXXXXX/events-device-alexa`.
 3. In the indexWorkshop.handler handler, look for `EDIT_CODE #4` and uncomment the block.
 4. Click the **Save** button of the Lambda at the top right.
 
@@ -46,9 +46,9 @@ To test changes to the handler code, let's simulate an Alexa Request for a Smart
 
 Send a simulated Alexa Smart Home Discovery request to test the Lambda.
 
-1. Open the Lambda Console for the handler at [https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph)](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph)
+1. Open the Lambda Console for the handler at [https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph)](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph) (US) or [https://console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/skill-sample-nodejs-multi?tab=graph)](https://console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/skill-sample-nodejs-multi?tab=graph) (EU).
 2. Open the *Select a test event..* dropdown from the top right of the menu and select **Configure test events**.
-3. In the *Configure test event* dialog, create a new test event with the *Event name* of `directiveDiscovery` and paste the raw content from [https://raw.githubusercontent.com/alexa/alexa-smarthome/master/sample_messages/Discovery/Discovery.request.json](https://raw.githubusercontent.com/alexa/alexa-smarthome/master/sample_messages/Discovery/Discovery.request.json) into the text area replacing the existing placeholder content.
+3. In the *Configure test event* dialog, create a new test event with the *Event name* of `directiveDiscovery` and paste the raw content from the file **Discovery.request.json** in the folder *instructions* ([source](https://raw.githubusercontent.com/alexa/alexa-smarthome/master/sample_messages/Discovery/Discovery.request.json)) into the text area replacing the existing placeholder content.
 4. Click the **Create** button at the bottom to create the test event.
 5. With the *directiveDiscovery* test selected in the dropdown, click **Test**.
 6. Open the **Execution result** details to inspect the result and notice that your handler now returns a `Discover.Response` and the definition of a "Beeper" device.

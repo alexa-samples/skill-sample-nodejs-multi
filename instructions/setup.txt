@@ -2,10 +2,10 @@
 amzn1.ask.skill.XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 [AWS Lambda ARN]
-arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:skill-sample-LANGUAGE-multi
+arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi
 
 [Amazon SQS Queue Url]
-https://sqs.us-east-1.amazonaws.com/XXXXXXXXXXXX/BeeperEventQueue
+https://sqs.region.amazonaws.com/XXXXXXXXXXXX/BeeperEventQueue
 
 [Security Profile Client ID]
 amzn1.application-oa2-client.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
