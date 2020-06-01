@@ -29,7 +29,7 @@ Update the problem code to properly pass a response.
 ## Test again by Sending an Utterances to Alexa
 1. Navigate to the ASK developer console at [https://developer.amazon.com/alexa/console/ask](https://developer.amazon.com/alexa/console/ask) and select the *Beeper* skill.
 2. Open the **Test** tab from the top menu.
-3. Type the following commands to test the skill:
+3. Type or say the following to test the skill:
 	- Custom: `ask beeper to beep`
 	- Custom: `ask beeper to beep once`
 	- Smart Home: `turn on beeper`
@@ -38,7 +38,7 @@ Update the problem code to properly pass a response.
 For the custom model, if successful, Alexa should respond with "Beeping!" and a tone should play from your computer.
 For the smart home model, if successful, Alexa should respond with "OK" and turn on or turn off the beeping on your computer.
 
-If not successful, contact a proctor or have another look for additional issues in your logs and code.
+If not successful, contact an instructor or have another look for additional issues in your logs and code.
 
 ## Checkpoint
 You should now have a skill that beeps at you!
@@ -55,6 +55,8 @@ If you want to remove the sample and cleanup the backend:
 - Implement another intent that passes back a different command to the client via session attributes.
 - Implement the [Alexa Smart Home Lock Controller interface](https://developer.amazon.com/docs/device-apis/alexa-lockcontroller.html) to utilize the `lockComputer` function in the client code.
 - Use the `openFile` function in the client code using a custom model.
+
+## Congrats, well done!!!
 
 ___
 Return to the [Instructions](README.md)

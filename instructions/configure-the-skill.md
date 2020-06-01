@@ -4,16 +4,16 @@ Configure the Alexa skill and fill out the required settings.
 
 ## Configure the Custom settings
 
-Configure the Custom model settings for the skill by setting the invocation, creating a BeepIntent, and assigning the endpoint to the created Lambda ARN.
+Configure the Custom model settings for the skill by setting the invocation, creating a `BeepIntent`, and assigning the endpoint to the created Lambda ARN.
 
 ### Configure the Invocation
-*Note: you can skip this if you deployed the skill via the ASK-CLI.*
+> Note: you can skip this if you deployed the skill via the ASK-CLI.
 1. Return to the Alexa Skills Kit Developer Console at [https://developer.amazon.com/alexa/console/ask](https://developer.amazon.com/alexa/console/ask) and edit your *Beeper* skill.
-2. If you see Smart home model details, on left menu, select the *CUSTOM* tab (otherwise there's no need to do this).
+2. If you see Smart home model detailson the left menu, select the *CUSTOM* tab (otherwise there's no need to do this).
 3. Select the *Invocation* sub-tab and verify the *Skill Invocation Name* is set to `beeper`.
 
 ### Configure the Intents
-*Note: you can skip this if you deployed the skill via the ASK-CLI.*
+> Note: you can skip this if you deployed the skill via the ASK-CLI.
 1. Click the **+ Add** button in the *Intents* sub-tab.
 2. With *Create custom intent* selected, enter `BeepIntent` 
 3. Click the **Create custom intent** button.
@@ -25,7 +25,7 @@ Configure the Custom model settings for the skill by setting the invocation, cre
 ### Configure the Endpoint
 1. Click *Endpoint* sub-tab.
 2. Select *AWS Lambda ARN*
-3. In the **Default Region**, enter the ARN stored as **[AWS Lambda ARN]** in the `setup.txt` file. The ARN should look something like: `arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`
+3. In the **Default Region**, enter the ARN stored as **[AWS Lambda ARN]** in the `setup.txt` file. The ARN should look like this: `arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`
 4. Click the **Save Endpoints** button.
 5. Return to the *Invocation* sub-tab and click the **Build Model** button.
 
@@ -35,7 +35,7 @@ Configure the Custom model settings for the skill by setting the invocation, cre
 
 Set the endpoint value of the Smart Home model to the same created Lambda ARN as the Custom model. 
 
-1. On left menu, select *PERMISSIONS* or *ACCOUNT LINKING*, then select the *SMART HOME* tab.
+1. On left menu, select the *SMART HOME* tab.
 2. For the *Smart Home service endpoint*, enter the ARN saved in your `setup.txt` file as **[AWS Lambda ARN]** into the *Default endpoint* field. The ARN should look something like: `arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`
 3. Click the **Save** button.
 
@@ -66,7 +66,7 @@ Using your account-specific values from the skill configuration section, collect
 6. Click **Save**.
 
 ## Checkpoint
-We should now have a have a fully configured Alexa skill that handles the selected custom and smart home interaction models and has account linking configured.
+We should now have a have a fully configured Alexa skill that handles the selected Custom and Smart Home interaction models and has Account Linking configured.
  
 Next to Step [7. Edit the Code](edit-the-code.md)
 

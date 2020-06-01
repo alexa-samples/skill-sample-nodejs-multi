@@ -2,11 +2,11 @@
 
 For the sample environment, a development security profile will be used for configuring [Account Linking](https://developer.amazon.com/en-US/docs/alexa/account-linking/understand-account-linking.html), which is required for the Smart Home model and therefore for the skill overall.
 
-> If you already have a valid `Skill Sample` security profile created from a previous sample, you can reuse that profile and skip creating and configuring a new security profile.
+> If you already have a valid `Skill Sample` security profile created from a previous sample, you can reuse that profile and skip creating and configuring a new security profile. You can see your created profiles [here](https://developer.amazon.com/settings/console/securityprofile/overview.html).
 
 ## Create a Security Profile
 
-To facilitate account linking in the sample, a security profile is needed to generate a Client ID and Client Secret to use during the configuration of the Alexa skill.
+To facilitate account linking in the sample, a security profile is needed to generate a `Client ID` and `Client Secret` to use during the configuration of the Alexa skill.
 
 1. In your web browser, go to the Security Profile creation page at [https://developer.amazon.com/iba-sp/create-security-profile.html](https://developer.amazon.com/iba-sp/create-security-profile.html). You can also access this page by navigating to then Amazon Developer Console and going to the *APPS & SERVICES > Security Profiles* section.
 
@@ -30,8 +30,8 @@ Further configuration of the Security Profile Allowed Return URLs will be done d
 ## Checkpoint
 We should now have what we need for identifying our application to Amazon:
 
-- A created *Skill Sample* security profile
-- Valid Client ID and Client Secret credentials for our skill saved into `setup.txt`
+- A created `Skill Sample` security profile
+- Valid `Client ID` and `Client Secret` credentials for our skill saved into `setup.txt`
 
 Next to Step [6. Configure the Skill](configure-the-skill.md)
 

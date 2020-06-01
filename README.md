@@ -1,4 +1,4 @@
-# Build an Alexa Skill with Multiple Models (Node.js)
+# Build a Multi Capability Alexa Skill (Node.js)
 
 This is an Alexa skill sample that shows how to handle custom and smart home requests in a single skill that supports both models. It shows the discovery and request/response handling of a skill implementing Alexa custom and smart home capabilities.
 

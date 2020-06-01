@@ -1,15 +1,8 @@
 // -*- coding: utf-8 -*-
 
-// Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-// Licensed under the Amazon Software License (the "License"). You may not use this file except in
-// compliance with the License. A copy of the License is located at
-
-//    http://aws.amazon.com/asl/
-
-// or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied. See the License for the specific
-// language governing permissions and limitations under the License.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0
+// Licensed under the Amazon Software License  http://aws.amazon.com/asl/
 
 /* eslint-disable  func-names */
 /* eslint-disable  no-console */
@@ -30,7 +23,7 @@ const LaunchRequestHandler = {
             .reprompt(speechText)
             .withSimpleCard('Hello World', speechText)
             .getResponse();
-    },
+    }
 };
 
 const BeepIntentHandler = {
@@ -47,7 +40,7 @@ const BeepIntentHandler = {
             .speak(speechText)
             .withSimpleCard('Beeping!', speechText)
             .getResponse();
-    },
+    }
 };
 
 const HelpIntentHandler = {
@@ -63,7 +56,7 @@ const HelpIntentHandler = {
             .reprompt(speechText)
             .withSimpleCard('Hello World', speechText)
             .getResponse();
-    },
+    }
 };
 
 const CancelAndStopIntentHandler = {
@@ -79,7 +72,7 @@ const CancelAndStopIntentHandler = {
             .speak(speechText)
             .withSimpleCard('Hello World', speechText)
             .getResponse();
-    },
+    }
 };
 
 const FallbackIntentHandler = {
@@ -105,7 +98,7 @@ const SessionEndedRequestHandler = {
         console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
 
         return handlerInput.responseBuilder.getResponse();
-    },
+    }
 };
 
 const ErrorHandler = {
@@ -119,7 +112,7 @@ const ErrorHandler = {
             .speak('Sorry, there was an error. Please say again.')
             .reprompt('Sorry, there was an error. Please say again.')
             .getResponse();
-    },
+    }
 };
 
 const skillBuilder = Alexa.SkillBuilders.custom();
