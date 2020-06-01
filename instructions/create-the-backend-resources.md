@@ -12,7 +12,7 @@ Access the AWS CloudFormation console in your preferred region and load a templa
 
 1. Login to the AWS Console for CloudFormation at [https://console.aws.amazon.com/cloudformation/home](https://console.aws.amazon.com/cloudformation/home) (then select the region that is most appropriate for your smart home locale of choice, eg. for North America choose *us-east-1*, for Europe and India choose *eu-west-1* and for Far East choose *us-west-1*).
 2. Click **Create stack** and select **With new resources (standard)**.
-3. Select **Template is ready** and **Upload a template file**. If you are attending a workshop in the US, choose the `workshop.multi.template.json` (US) or the `workshop.eu.multi.template.json` (EU) file from the */cloudformation* directory in your working directory. Otherwise select the `self.multi.template.json` (US) or the `self.eu.multi.template.json` (EU) file (the `workshop` templates will append the word "workshop" by default to a bunch of resources in the stack, you can change this in the stack parameters).
+3. Select **Template is ready** and **Upload a template file**. If you are attending a workshop in the US, choose the `workshop.multi.template.json` (US) or, if you're in EU, select the `workshop.eu.multi.template.json` (EU) file from the */cloudformation* directory in your working directory. If you're doing this outside a workshop just select the `self.multi.template.json` (US) or the `self.eu.multi.template.json` (EU) file. The `workshop` templates will append the word "workshop" by default to a bunch of resources in the stack so they don't cause conflicts with your personal deployment of this project if available (in any case you can change this in the stack parameters).
 4. Click **Next**.
 5. For the **Stack name** on the *Stack Details* page, enter `skill-sample-nodejs-multi`.
 6. In the **AlexaSkillId** field of the *Parameters*, enter the Alexa Skill ID of the previously created skill stored in the **[Alexa Skill Application ID]** section of the `setup.txt` file.
@@ -25,7 +25,7 @@ Access the AWS CloudFormation console in your preferred region and load a templa
 
 ## Collect the CloudFormation Stack Outputs
 
-After the stack completes, collect the created resource identfiers.
+After the stack completes, collect the created resource identifiers.
 
 1. When the *skill-sample-nodejs-multi* stack is created, you will see its *Status* reported as `CREATE_COMPLETE`.
 2. From the *Outputs* tab of the stack, collect value of the `BeeperFunctionLambdaArn` key and store it into the **[AWS Lambda ARN]** section of the `setup.txt` file in your working directory. It will look something like the following: `arn:aws:lambda:region:XXXXXXXXXXXX:function:skill-sample-nodejs-multi`.
@@ -47,7 +47,7 @@ In your AWS environment, you should now have the following resources available t
 - An AWS Lambda Function with Triggers configured for Alexa using the restrictive Role
 - A Simple Queue Service (SQS) Queue for messages to our device
 
-You should also have saved the Lambda ARN and Queue URL to be used later during configuration.
+You should also have saved the Lambda ARN and SQS Queue URL to be used later during configuration.
 
 Next to Step [5. Create a Security Profile](create-a-security-profile.md)
 

@@ -1,42 +1,42 @@
 {
-  "interactionModel": {
-      "languageModel": {
-          "invocationName": "pitador",
-          "intents": [
-              {
-                  "name": "AMAZON.FallbackIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.StopIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.NavigateHomeIntent",
-                  "samples": []
-              },
-              {
-                  "name": "BeepIntent",
-                  "slots": [],
-                  "samples": [
-                      "pita una vez",
-                      "pitar una vez",
-                      "pita",
-                      "pitar",
-                      "pite una vez",
-                      "pite"
-                  ]
-              }
-          ],
-          "types": []
-      }
-  }
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "pitador",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "BeepIntent",
+                    "slots": [],
+                    "samples": [
+                        "pita una vez",
+                        "pitar una vez",
+                        "pita",
+                        "pitar",
+                        "pite una vez",
+                        "pite"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
 }

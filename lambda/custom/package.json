@@ -1,13 +1,13 @@
 {
   "name": "skill-sample-nodejs-multi",
-  "version": "1.0.0",
-  "description": "A sample Alexa skill that uses multiple models.",
+  "version": "1.0.1",
+  "description": "A sample Multi Capability Alexa skill.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Amazon Alexa",
+  "license": "ASL",
   "dependencies": {
     "ask-sdk-core": "^2.7.0",
     "ask-sdk-model": "^1.26.0",

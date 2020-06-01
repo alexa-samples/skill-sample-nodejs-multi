@@ -10,19 +10,19 @@ Edit the handler to properly route and handle both a custom and smart home reque
 
 ### Import Handlers
 1. Open the Lambda Console at [https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-nodejs-multi?tab=graph) (US) or [https://console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/skill-sample-nodejs-multi?tab=graph](https://console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/skill-sample-nodejs-multi?tab=graph) (EU) and inspect the Function code section.
-2. In the indexWorkshop.handler handler, look for `EDIT_CODE #0` and uncomment the entire block except for the `// EDIT_CODE ...` line (you can use CMD-/ which is a shortcut for *Edit* -> *Comment* -> *Toggle Comment* in the embedded IDE)
+2. In the `indexWorkshop.handler` handler, look for `EDIT_CODE #0` and uncomment the entire block except for the `// EDIT_CODE ...` line (you can use CMD-/ which is a shortcut for *Edit* -> *Comment* -> *Toggle Comment* in the embedded IDE)
 
 > If the file is not already open in the inline editor, you can open it from the file tree on the left.
 
 This code includes the additional handlers for Session requests (Custom) and Directive requests (Smart Home).
 
 ### Configure the Handler for Smart Home Requests
-1. In the indexWorkshop.handler handler, look for `EDIT_CODE #1` and uncomment the entire block except for the `// EDIT_CODE ...` line.
+1. In the `indexWorkshop.handler` handler, look for `EDIT_CODE #1` and uncomment the entire block except for the `// EDIT_CODE ...` line.
 
 This code looks for a directive, passes the request to the directive handler, and then evaluates the return response to send a message to the client.
 
 ### Configure the Handler for Custom Requests
-1. In the indexWorkshop.handler handler, look for `EDIT_CODE #2` and uncomment the entire block except for the `// EDIT_CODE ...` line.
+1. In the `indexWorkshop.handler` handler, look for `EDIT_CODE #2` and uncomment the entire block except for the `// EDIT_CODE ...` line.
 2. Click the **Save** button of the Lambda at the top right.
 
 This code looks for a session, passes the request to the session handler, and then evaluates the return response to send a message to the client.

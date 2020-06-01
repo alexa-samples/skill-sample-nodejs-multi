@@ -15,7 +15,11 @@ To work with this sample, you will need both an Amazon Developer account and an 
 ## Check for the Required Tools
 
 For successful implementation of this sample, you will need a current version of Node.js.
-Optional: if you have the [ASK-CLI](https://alexa.design/cli) installed you can speed things up.
+Optional: if you have the [ASK-CLI](https://alexa.design/cli) installed you can speed things up but you'll need version 1.7.23, not the latest. In order to install v1.7.23 try doing:
+
+```
+npm install -g ask-cli@1.7.23"
+```
 
 ### **Node.js**
 
@@ -31,7 +35,7 @@ If the reported version is less than 10, visit [https://nodejs.org/en/download/]
 ## Checkpoint
 - You should be able to access both your AWS and Alexa Developer accounts.
 - From a command-line you should be able to execute `node --version` and confirm that Node.js 10+ is installed.
-- Optional: (ASK-CLI) From a command-line you can execute `ask --version` and get at least v1.7.20
+- Optional: (ASK-CLI) From a command-line you can execute `ask --version` and get v1.7.23 (not higher)
 
 Next to Step [2. Get the Sample](get-the-sample.md)
 
