@@ -9,7 +9,7 @@ Configure the Custom model settings for the skill by setting the invocation, cre
 ### Configure the Invocation
 > Note: you can skip this if you deployed the skill via the ASK-CLI.
 1. Return to the Alexa Skills Kit Developer Console at [https://developer.amazon.com/alexa/console/ask](https://developer.amazon.com/alexa/console/ask) and edit your *Beeper* skill.
-2. If you see Smart home model detailson the left menu, select the *CUSTOM* tab (otherwise there's no need to do this).
+2. If you see Smart home model details on the left menu, select the *CUSTOM* tab (otherwise there's no need to do this).
 3. Select the *Invocation* sub-tab and verify the *Skill Invocation Name* is set to `beeper`.
 
 ### Configure the Intents
